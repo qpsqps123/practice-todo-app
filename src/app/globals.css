@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #69247c;
+  --foreground: #171717;
+}
+
+/* theme : #69247C, #DA498D, #FAC67A, #F9E6CF */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-yeon-sung), Arial, Helvetica, sans-serif;
+}
