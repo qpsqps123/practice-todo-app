@@ -1,19 +1,6 @@
 import type { Metadata } from "next";
-import { Playwrite_VN, Yeon_Sung } from "next/font/google";
-import "./globals.css";
-
-export const playwriteVn = Playwrite_VN({
-  weight: "400",
-  variable: "--font-playwrite-vn",
-  display: "swap",
-});
-
-export const yeonSung = Yeon_Sung({
-  weight: "400",
-  variable: "--font-yeon-sung",
-  subsets: ["latin"],
-  display: "swap",
-});
+import "../styles/global.css";
+import { yeonSung } from "@/utils/getFonts";
 
 export const metadata: Metadata = {
   title: "Todo App",
