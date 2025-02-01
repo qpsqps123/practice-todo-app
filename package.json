@@ -34,4 +34,7 @@
     "ts-jest": "^29.2.5",
     "typescript": "^5"
   }
+    "typescript": "^5",
+    "uuid": "^11.0.5"
+  },
 }
