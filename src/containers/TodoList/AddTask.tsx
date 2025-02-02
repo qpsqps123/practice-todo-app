@@ -20,6 +20,8 @@ export default function AddTask({ todoList, setTodoList }: IProps) {
 
     setTodoList([...todoList, {id: id, task: value}])
 
+    tInput.value = ''
+    setValue('')
   }
 
   return (
