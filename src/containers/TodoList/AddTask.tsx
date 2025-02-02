@@ -13,6 +13,8 @@ export default function AddTask({ todoList, setTodoList }: IProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    if (value === '') return
+
     const id = uuidv4() 
 
     const tForm = e.target as HTMLFormElement
