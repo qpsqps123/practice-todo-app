@@ -1,4 +1,4 @@
-import TodoList from "@/containers/todo-list";
+import TodoList from "@/containers/TodoList";
 import { playwriteVn } from "@/utils/getFonts";
 
 export default function Home() {
