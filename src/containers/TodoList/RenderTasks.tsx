@@ -8,7 +8,7 @@ export default function RenderTasks({ todoList }: IProps) {
   const todoListNodes = todoList.map((item: string) => { 
     const id = uuidv4() 
 
-    return <li key={id}>{item}</li> }
+    return <li key={id} className="bg-primary rounded-lg px-4 py-1 w-full break-words">{item}</li> }
   )
 
   const handleClick = () => {
@@ -17,7 +17,7 @@ export default function RenderTasks({ todoList }: IProps) {
 
   return (
     <section>
-      <ul onClick={handleClick}>
+      <ul className="flex flex-col flex-wrap gap-5 justify-center w-[20em] mx-auto my-10" onClick={handleClick}>
         {todoListNodes}
       </ul>
     </section>
