@@ -1,10 +1,4 @@
 import Image from "next/image";
-import { Dispatch, SetStateAction, useState } from "react";
-
-interface IProps {
-  todoList: string[],
-  setTodoList: Dispatch<SetStateAction<string[]>>,
-}
 import { useState } from "react";
 import {v4 as uuidv4} from 'uuid'
 import { IProps } from "./types";
