@@ -1,6 +1,6 @@
 'use client'
 
-import AddTask from "../components/AddTask";
+import AddTask from "./AddTask";
 import RenderTasks from "./RenderTasks";
 import { useState } from "react";
 
