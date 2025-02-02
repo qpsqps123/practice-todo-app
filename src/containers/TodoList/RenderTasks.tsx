@@ -1,23 +1,23 @@
-import { Dispatch, SetStateAction } from 'react'
-import {v4 as uuidv4} from 'uuid'
-interface IProps {
-  todoList: string[],
-  setTodoList: Dispatch<SetStateAction<string[]>>,
-}
-export default function RenderTasks({ todoList }: IProps) {
-  const todoListNodes = todoList.map((item: string) => { 
-    const id = uuidv4() 
+import { IProps, ITodoList } from "./types"
 
-    return <li key={id} className="bg-primary rounded-lg px-4 py-1 w-full break-words">{item}</li> }
+export default function RenderTasks({ todoList, setTodoList }: IProps) {
+
+  const todoListNodes = todoList.map((item: ITodoList) => { 
+
+    return <li key={item.id} id={item.id} className="bg-primary rounded-lg px-4 py-1 w-full break-words">{item.task}</li> }
   )
 
-  const handleClick = () => {
-    
+  const handleClick = (e: React.MouseEvent<HTMLUListElement>) => {
+    const target = e.target as HTMLUListElement
+
+    const filteredTodoList = todoList.filter((item) => item.id !== target.id)
+
+    setTodoList(filteredTodoList)
   }
 
   return (
     <section>
-      <ul className="flex flex-col flex-wrap gap-5 justify-center w-[20em] mx-auto my-10" onClick={handleClick}>
+      <ul onClick={handleClick} className="flex flex-col flex-wrap gap-5 justify-center w-[20em] mx-auto my-16" >
         {todoListNodes}
       </ul>
     </section>
